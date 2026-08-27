@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoices</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="frame-inner">
+  <section class="panel">
+    <h2>Invoices</h2>
+
+    <section class="list-view">
+      <table class="invoice-table">
+        <thead>
+          <tr><th>Number</th><th>Customer</th><th>Amount</th><th>Due date</th><th>Status</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="detail-view" hidden>
+      <p style="margin-bottom:16px;"><button class="btn btn-back" type="button">&larr; Back to invoices</button></p>
+      <h3>Invoice <span class="detail-number"></span></h3>
+      <p style="margin:8px 0;">Customer: <span class="detail-customer"></span></p>
+      <div class="pay-errors" role="alert"></div>
+      <div class="field"><label>Amount (USD) <input type="text" class="amount-input"></label></div>
+      <div class="field"><label>Due date <input type="date" class="due-date-input"></label></div>
+      <p style="margin-top:16px;"><button class="btn btn-primary pay-btn" type="button">Pay invoice</button></p>
+      <div class="pay-success" hidden></div>
+    </section>
+  </section>
+  <script src="assets/invoices.js"></script>
+</body>
+</html>

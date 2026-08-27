@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customers</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="frame-inner">
+  <section class="panel">
+    <h2>Customers</h2>
+    <div class="toolbar">
+      <input type="search" class="search-input" placeholder="Search by name or email">
+      <button class="btn btn-primary" type="button">Add customer</button>
+    </div>
+
+    <form class="add-form" hidden>
+      <div class="form-errors"></div>
+      <div class="field"><label>Full name <input type="text" class="name-input"></label></div>
+      <div class="field"><label>Email <input type="text" class="email-input"></label></div>
+      <div class="field"><label>Company <input type="text" class="company-input"></label></div>
+      <p style="margin-top:16px;">
+        <button type="submit" class="btn btn-primary">Save customer</button>
+        <button type="button" class="btn btn-cancel">Cancel</button>
+      </p>
+    </form>
+
+    <section class="edit-panel" hidden>
+      <h3>Edit customer</h3>
+      <div class="form-errors"></div>
+      <div class="field"><label>Full name <input type="text" class="name-input"></label></div>
+      <div class="field"><label>Email <input type="text" class="email-input"></label></div>
+      <div class="field"><label>Company <input type="text" class="company-input"></label></div>
+      <p style="margin-top:16px;">
+        <button class="btn btn-primary edit-save">Save changes</button>
+        <button class="btn edit-cancel">Cancel</button>
+      </p>
+    </section>
+
+    <table class="customer-table">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Company</th><th>Status</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="no-results" hidden>No customers match your search.</div>
+  </section>
+
+  <div class="modal-overlay" hidden>
+    <div class="modal">
+      <h3>Delete customer</h3>
+      <p style="margin-top:8px;">Are you sure you want to delete <span class="modal-name"></span>? This cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn modal-cancel">Cancel</button>
+        <button class="btn btn-danger modal-confirm">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/customers.js"></script>
+</body>
+</html>
