@@ -38,6 +38,8 @@ th { font-size: 12px; text-transform: uppercase; color: #5f6368; }
 .nav-item { display: block; color: #a7abb4; padding: 12px 20px; border-left: 3px solid transparent; }
 .nav-item:hover { color: #fff; background: #2b2e38; }
 .nav-item.active { color: #fff; border-left-color: #6d4aff; background: #2b2e38; }
+.nav-item.logout-link { color: #d93025; margin-top: auto; }
+.nav-item.logout-link:hover { background: rgba(217, 48, 37, 0.1); }
 .app-frame { flex: 1; padding: 16px; }
 .content-frame { width: 100%; height: 100%; border: 1px solid #e1e4e8; border-radius: 8px; background: #fff; }
 .frame-inner { padding: 16px; }
